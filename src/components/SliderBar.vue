@@ -44,15 +44,15 @@
         @touchstart.prevent="onKnobTouchStart"
       ></div>
       <!-- 丸（目盛り） -->
-      <div class="w-full flex justify-between z-10">
+      <div class="w-full flex justify-between z-10 pointer-events-none">
         <template v-for="(value, i) in dotValues" :key="i">
-          <div class="flex flex-col items-center">
+          <!-- ここだけクリックを受け付ける -->
+          <div class="flex flex-col items-center pointer-events-auto">
             <div
-              class="bg-white border-2 border-gray-400 rounded-full flex items-center justify-center shadow cursor-pointer"
+              class="bg-white border-2 border-gray-400 rounded-full shadow cursor-pointer"
               :style="{ width: dotSizePx, height: dotSizePx }"
               @click="moveKnob(i)"
             ></div>
-            
           </div>
         </template>
       </div>
