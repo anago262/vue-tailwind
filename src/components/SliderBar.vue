@@ -49,7 +49,12 @@
           <!-- ここだけクリックを受け付ける -->
           <div class="flex flex-col items-center pointer-events-auto">
             <div
-              class="bg-white border-2 border-gray-400 rounded-full shadow cursor-pointer"
+              :class="[
+                i < knobIndex ? props.leftDotColor : 
+                i > knobIndex ? props.rightDotColor : 
+                props.knobDotColor,
+                'border-2 rounded-full shadow cursor-pointer'
+              ]"
               :style="{ width: dotSizePx, height: dotSizePx }"
               @click="moveKnob(i)"
             ></div>
@@ -105,6 +110,18 @@ const props = defineProps({
   modelValue: {
     type: Number,
     default: 50
+  },
+  leftDotColor: {
+    type: String,
+    default: "bg-blue-400 border-blue-500"
+  },
+  rightDotColor: {
+    type: String,
+    default: "bg-gray-200 border-gray-400"
+  },
+  knobDotColor: {
+    type: String,
+    default: "bg-white border-blue-700"
   }
 });
 

@@ -8,17 +8,17 @@ const score = ref(50);
 
 <template>
   <div class="flex flex-col items-center mt-8">
-    <SliderBar v-model="score" barHeight="20px" dotSize="24px" knobColor="#f87171" />
+    <SliderBar v-model="score" barHeight="20px" dotSize="24px" knobColor="#f87171" rightDotColor="bg-white border-gray-400" />
     <div class="h-8"></div>
     <!-- knobSizeを指定してつまみの大きさを変える例 -->
-    <SliderBar v-model="score" barHeight="20px" dotSize="24px" knobColor="#34d399" :knobSize="40" />
+    <SliderBar v-model="score" barHeight="20px" dotSize="24px" knobColor="#34d399" :knobSize="40" rightDotColor="bg-white border-gray-400" />
     <div class="h-8"></div>
-    <SliderBar v-model="score" barHeight="20px" dotSize="24px" knobColor="#fbbf24" :knobSize="20" />
+    <SliderBar v-model="score" barHeight="20px" dotSize="24px" knobColor="#fbbf24" :knobSize="20" rightDotColor="bg-white border-gray-400" />
     <div class="h-8"></div>
     <!-- dotSizeを指定して目盛りの大きさを変える例 -->
-    <SliderBar v-model="score" barHeight="20px" dotSize="36px" knobColor="#6366f1" :knobSize="44" />
+    <SliderBar v-model="score" barHeight="20px" dotSize="36px" knobColor="#6366f1" :knobSize="44" rightDotColor="bg-white border-gray-400" />
     <div class="h-8"></div>
-    <SliderBar v-model="score" barHeight="20px" dotSize="16px" knobColor="#10b981" :knobSize="24" />
+    <SliderBar v-model="score" barHeight="20px" dotSize="16px" knobColor="#10b981" :knobSize="24" rightDotColor="bg-white border-gray-400" />
 
     <br/>
     <br/>
