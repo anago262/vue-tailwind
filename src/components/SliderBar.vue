@@ -77,6 +77,14 @@
 <script setup>
 import { computed, ref, watch, onMounted, onBeforeUnmount } from "vue";
 
+/**
+ * SliderBar Props
+ * @prop {string|number} [barHeight=8]  スライダーのバーの高さ(pxまたはCSS長さ)
+ * @prop {string|number} [dotSize=24]   目盛り（ドット）の直径(pxまたはCSS長さ)
+ * @prop {string|number} [knobSize]     つまみの直径(pxまたはCSS長さ)。未指定時はdotSize+8
+ * @prop {string}        [knobColor="#0ea5e9"] つまみの色
+ * @prop {number}        [modelValue=50] v-model値
+ */
 const props = defineProps({
   barHeight: {
     type: [String, Number],
